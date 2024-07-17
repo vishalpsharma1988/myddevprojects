@@ -167,10 +167,10 @@ function client_page_screen_options() {
         );
         add_screen_option( 'per_page', $args );
 
-        // if ($per_page === 'items_per_page') {
-        //     $user_id = get_current_user_id();
-        //     update_user_meta($user_id, 'my_custom_table_items_per_page', intval($value));
-        // }
+        if ($per_page === 'items_per_page') {
+            $user_id = get_current_user_id();
+            update_user_meta($user_id, 'my_custom_table_items_per_page', intval($value));
+        }
 
         $table = new Wmr_Client_Display();
 
